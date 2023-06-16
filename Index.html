@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iniciar sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Styles/global.css">
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./Scripts/scrollreveal.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Iniciar sesión</h2>
+
+          <form id="login-form">
+            <div class="form-group">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+          </form>
+
+          <hr>
+
+          <p class="card-text">¿No tienes una cuenta? <a href="#signup-form">Crear cuenta</a></p>
+        </div>
+      </div>
+
+      <div class="card" id="signup-form" style="display: none;">
+        <div class="card-body">
+          <h2 class="card-title">Crear cuenta</h2>
+
+          <form id="create-account-form">
+            <div class="form-group">
+              <label for="new-email">Correo electrónico:</label>
+              <input type="email" class="form-control" id="new-email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+              <label for="new-password">Contraseña:</label>
+              <input type="password" class="form-control" id="new-password" placeholder="Ingresa tu contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Crear cuenta</button>
+          </form>
+
+          <hr>
+
+          <p class="card-text">¿Ya tienes una cuenta? <a href="#login-form">Iniciar sesión</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./BD/Firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+  });
+
+  sr.reveal('.container-fluid', { delay: 200 });
+  sr.reveal('.login-form', { delay: 250 });
+
+
+  $(document).ready(function() {
+    $('a[href="#signup-form"]').click(function() {
+      $('#login-form').hide();
+      $('#signup-form').show();
+    });
+
+    $('a[href="#login-form"]').click(function() {
+      $('#signup-form').hide();
+      $('#login-form').show();
+    });
+  });
+
+
+
+</script>
+
+</body>
+</html>
