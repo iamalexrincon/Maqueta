@@ -125,19 +125,7 @@
       </ul>
     </div>
   </footer>
-<script>
-  // Verificar el estado de autenticación del usuario al cargar la página
-window.addEventListener("load", function() {
-  var usuarioAutenticado = localStorage.getItem("usuarioAutenticado");
 
-  if (!usuarioAutenticado) {
-    // El usuario no ha iniciado sesión correctamente, redirigirlo a Cuenta.html
-    window.location.href = "../index.html";
-    // También puedes mostrar un mensaje de error en lugar de redirigir
-  }
-});
-
-</script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
