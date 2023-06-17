@@ -52,7 +52,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.location.href = "./Pages/Store.html";
   } else {
     // El usuario no ha iniciado sesión, redirigir a Cuenta.html
-    window.location.href = "../Index.html";
+    window.location.href = "../index.html";
   }
 });
 
