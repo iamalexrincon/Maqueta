@@ -51,8 +51,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     loadIndexContent();
     window.location.href = "./Pages/Store.html";
   } else {
-    // El usuario no ha iniciado sesión, redirigir a Cuenta.html
-    window.location.href = "../index.html";
+    
   }
 });
 
